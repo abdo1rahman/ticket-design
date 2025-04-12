@@ -1,0 +1,37 @@
+<%- include('header.ejs') %>
+
+<main>
+  <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+  <p>Secure your spot at next year's biggest coding conference.</p>
+  
+  <form action="/ticket" method="post"> <!--REMEMBER TO ADD THE ACTION-->
+  
+    <label for="fileUpload" class="upload-area" id="drop-area">
+      <img src="../assets/images/icon-upload.svg" alt="upload icon"> <!--img not working so far-->
+      <p>Drag and drop or click to upload</p>
+      <input type="file" id="fileUpload">
+    </label>
+  
+    <label for="fullName">
+      <p>Full Name</p>
+      <input class="input-area" name="full-name" type="text" id="full-name">
+    </label>
+  
+    <label for="email" id="email-area">
+      <p>Email Address</p>
+      <input class="input-area" name="email" id="email" type="text" placeholder="example@email.com">
+    </label>
+  
+    <label for="githubUsername">
+      <p>Github Username</p>
+      <input type="text" name="github-username" id="github">
+    </label>
+  
+    <button type="submit" class="btn" id="btn">
+      Generate My Ticket
+    </button>
+  
+  </form>
+</main>
+  
+<%- include("footer.ejs") %>

@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
   res.render('main.ejs');
 });
 
-app.post('/ticket', (req, res) => {
+app.post('/ticket', (req, res) => { 
   res.render('ticket.ejs');
 });
 

@@ -51,11 +51,22 @@ h1{
   width: 38rem;
 }
 
+
+
 main{
   width: 30rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#main-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
 form{
@@ -80,10 +91,15 @@ form{
   display: none;
 }
 
+#drop-area>label{
+  cursor: pointer;
+}
+
 #upload-icon {
   border: 0.1px solid rgb(103, 103, 103);
   border-radius: 10px;
   padding: 0.3rem;
+  cursor: pointer;
 }
 
 .input-area {
@@ -125,19 +141,44 @@ label p {
 
 .confirmation {
   position: relative;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+#content p {
+  margin-left: 50px;
 }
 
 #ticket {
   position: relative;
-  left: 0;
   display: flex;
   flex-direction: column;
+  width: 700px;
 }
 
-img#ticket-bg{
+#ticket-bg {
+  width: auto;
+  height: 300px;
+  object-fit: cover;
   position: absolute;
+  top: 0;
+  left: 2rem;
+  z-index: 0;
 }
 
+#content {
+  position: relative;
+  top: 15px;
+  padding: 20px;
+  left: 30px;
+  z-index: 1;
+  color: white;
+  text-align: left;
+}
 
 #logo-full{
   padding-top: 30px;
@@ -155,9 +196,6 @@ img#ticket-bg{
   width: 100%;
 }
 
-/* .lines{
-  top: 0;
-} */
 
 .big-curve {
   position: absolute;
@@ -172,10 +210,48 @@ img#ticket-bg{
   left: auto;
 }
 
-#content {
-  position: relative;
-  z-index: 1;
-  top: 15px;
-  padding: 20px;
+
+
+@media (max-width: 800px) {
+  #ticket-bg {
+    height: 220px;
+    left: 25%;
+  }
+
 }
 
+@media (max-width: 585px) {
+  form {
+    width: 20rem;
+  }
+
+  form input{
+    height: 30px;
+  }
+
+  #drop-area{
+    height: 7rem;
+  }
+
+  .hero {
+    max-width: 30rem;
+    text-align: center;
+  }
+
+  h1 {
+    font-family: extra-bold-font;
+    font-size: 2rem;
+    text-align: center;
+    width: 23rem;
+    left: 0;
+  }
+
+  main>p{
+    max-width: 20rem;
+    text-align: center;
+  }
+
+  .big-curve{
+    max-width: 15rem;
+  }
+}

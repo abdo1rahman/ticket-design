@@ -13,13 +13,129 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: regular-font;
 }
+
+@font-face {
+  font-family: 'regular-font';
+  src: url('../assets/fonts/static/Inconsolata-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'extra-bold-font';
+  src: url('../assets/fonts/static/Inconsolata-ExtraBold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'bold-font';
+  src: url('../assets/fonts/static/Inconsolata-bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'special-font';
+  src: url('../assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1{
+  font-family: extra-bold-font;
+  font-size: 2.6rem;
+  text-align: center;
+  width: 38rem;
+}
+
+main{
+  width: 30rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form{
+  width: 23rem;
+}
+
+#drop-area{
+  border: 1px dashed rgb(103, 103, 103);
+  border-radius: 15px;
+  width: 102%;
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: rgba(74, 74, 74, 0.312);
+  cursor: pointer;
+}
+
+#drop-area input {
+  display: none;
+}
+
+#upload-icon {
+  border: 0.1px solid rgb(103, 103, 103);
+  border-radius: 10px;
+  padding: 0.3rem;
+}
+
+.input-area {
+  width: 100%;
+  color: white;
+  background-color: rgba(74, 74, 74, 0.312);
+  border: 0.1px solid rgb(147, 147, 147);
+  height: 40px;
+  border-radius: 10px;
+  padding-left: 10px;
+  font-family: special-font;
+  font-size: 1rem;
+}
+
+.input-area:focus {
+  border: 3px solid white;
+}
+
+label p {
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.btn {
+  width: 104%;
+  margin-top: 10px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  background-color: hsl(7, 88%, 67%);
+  font-family: extra-bold-font;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn:hover{
+  background-color: hsl(7, 71%, 60%);
+}
+
 .confirmation {
   position: relative;
 }
 
 #ticket {
   position: relative;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+img#ticket-bg{
+  position: absolute;
 }
 
 
@@ -39,6 +155,10 @@ body {
   width: 100%;
 }
 
+/* .lines{
+  top: 0;
+} */
+
 .big-curve {
   position: absolute;
   bottom: 0;
@@ -46,15 +166,16 @@ body {
 }
 
 .small-curve {
+  position: absolute;
+  top: 0;
   right: 0;
+  left: auto;
 }
 
 #content {
   position: relative;
-  /* Needed for z-index to work */
   z-index: 1;
   top: 15px;
-  /* color: white; */
   padding: 20px;
 }
 

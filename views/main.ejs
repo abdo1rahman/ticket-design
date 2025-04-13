@@ -3,14 +3,21 @@
 <main>
   <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
   <p>Secure your spot at next year's biggest coding conference.</p>
+  <br>
   
-  <form action="/ticket" method="post"> <!--REMEMBER TO ADD THE ACTION-->
-  
-    <label for="fileUpload" class="upload-area" id="drop-area">
-      <img src="/assets/images/icon-upload.svg" alt="upload icon"> <!--img not working so far-->
-      <p>Drag and drop or click to upload</p>
-      <input type="file" id="fileUpload">
-    </label>
+  <form action="/ticket" method="post"> 
+
+    <p>Upload Avatar</p>
+    <div id="drop-area">
+      <label for="fileUpload" class="upload-area">
+        <img src="/assets/images/icon-upload.svg" id="upload-icon" alt="upload icon">
+        <p>Drag and drop or click to upload</p>
+        <input type="file" id="fileUpload">
+      </label>
+    </div>
+    <p style="color: rgba(122, 122, 122, 0.894); font-size: small;">
+      ⓘ Upload your photo (JPG or PNG, max size: 500KB).
+    </p>    
   
     <label for="fullName">
       <p>Full Name</p>
@@ -24,7 +31,7 @@
   
     <label for="githubUsername">
       <p>Github Username</p>
-      <input type="text" name="github-username" id="github">
+      <input type="text" class="input-area" name="github-username" id="github" placeholder="@yourusername">
     </label>
   
     <button type="submit" class="btn" id="btn">

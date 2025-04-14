@@ -4,43 +4,62 @@
   <div class="hero">
     <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
   </div>
-  <p>Secure your spot at next year's biggest coding conference.</p>  
-  <br>
-  
-  <form action="/ticket" method="post"> 
+  <p>Secure your spot at next year's biggest coding conference.</p>
+  <br />
 
+  <form action="/ticket" method="post">
     <p>Upload Avatar</p>
     <div id="drop-area">
       <label for="fileUpload" class="upload-area">
-        <img src="/assets/images/icon-upload.svg" id="upload-icon" alt="upload icon">
+        <img
+          src="/assets/images/icon-upload.svg"
+          id="upload-icon img"
+          alt="upload icon"
+        />
         <p>Drag and drop or click to upload</p>
-        <input type="file" id="fileUpload">
+        <input type="file" id="fileUpload" accept="image/jpeg, image/png" />
+        <div style="display: none" id="hid-btn">
+          <button class="img-btns" id="remove">Remove image</button>
+          <button class="img-btns" id="change">Change image</button>
+        </div>
       </label>
     </div>
-    <p style="color: rgba(122, 122, 122, 0.894); font-size: small;">
+    <p
+      style="color: rgba(122, 122, 122, 0.894); font-size: small"
+      id="input-massage"
+    >
       ⓘ Upload your photo (JPG or PNG, max size: 500KB).
-    </p>    
-  
+    </p>
+
     <label for="fullName">
       <p>Full Name</p>
-      <input class="input-area" name="full-name" type="text" id="full-name">
+      <input class="input-area" name="full-name" type="text" id="full-name" />
     </label>
-  
+
     <label for="email" id="email-area">
       <p>Email Address</p>
-      <input class="input-area" name="email" id="email" type="text" placeholder="example@email.com">
+      <input
+        class="input-area"
+        name="email"
+        id="email"
+        type="text"
+        placeholder="example@email.com"
+      />
     </label>
-  
+
     <label for="githubUsername">
       <p>Github Username</p>
-      <input type="text" class="input-area" name="github-username" id="github" placeholder="@yourusername">
+      <input
+        type="text"
+        class="input-area"
+        name="github-username"
+        id="github"
+        placeholder="@yourusername"
+      />
     </label>
-  
-    <button type="submit" class="btn" id="btn">
-      Generate My Ticket
-    </button>
-  
+
+    <button type="submit" class="btn" id="btn">Generate My Ticket</button>
   </form>
 </main>
-  
+
 <%- include("footer.ejs") %>

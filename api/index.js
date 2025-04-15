@@ -1,15 +1,20 @@
-// for backEnd
-import express from "express";
-import multer from "multer";
+// api/index.js
+const express = require("express");
+const multer = require("multer");
+const path = require("path");
 
 const app = express();
-const port = 3000;
 const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
-app.use(express.static("public"));
+
+// Set up EJS view engine
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "../views")); // <-- make sure this path is correct
+
+app.use(express.static(path.join(__dirname, "../public"))); // for serving CSS, images, etc.
 
 app.get("/", (req, res) => {
-  res.render("main.ejs");
+  res.render("main");
 });
 
 app.post("/ticket", upload.single("fileUpload"), (req, res) => {
@@ -24,15 +29,13 @@ app.post("/ticket", upload.single("fileUpload"), (req, res) => {
     month: "short",
   })} ${date.getDate()}, ${date.getFullYear()}`;
 
-  res.render("ticket.ejs", {
-    fullName: fullName,
-    email: email,
-    githubUsername: githubUsername,
-    src: src,
+  res.render("ticket", {
+    fullName,
+    email,
+    githubUsername,
+    src,
     date: formattedDate,
   });
 });
 
-app.listen(port, () => {
-  console.log(`Server listenging on http://localhost:${port}`);
-});
+module.exports = app;

@@ -75,17 +75,3 @@ changeBtn.addEventListener("click", function (e) {
   e.preventDefault(); // Prevent form submission
   fileInput.click(); // Simulate click on file input
 });
-
-form.addEventListener("submit", function (e) {
-  //!So far, this function is not working at all
-
-  const email = emailInput.value.trim();
-  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-  if (!emailPattern.test(email)) {
-    e.preventDefault(); // Stop the form from submitting
-    emailMsg.textContent = "ⓘ Please enter a valid email address.";
-    emailMsg.style.color = "hsl(7, 88%, 67%)";
-    emailInput.focus();
-  }
-});

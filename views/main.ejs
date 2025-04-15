@@ -7,19 +7,28 @@
   <p>Secure your spot at next year's biggest coding conference.</p>
   <br />
 
-  <form action="/ticket" method="post">
+  <form action="/ticket" method="post" enctype="multipart/form-data">
     <p>Upload Avatar</p>
     <div id="drop-area">
       <label for="fileUpload" class="upload-area">
         <img
           src="/assets/images/icon-upload.svg"
-          id="upload-icon img"
+          id="upload-icon"
           alt="upload icon"
         />
-        <p>Drag and drop or click to upload</p>
-        <input type="file" id="fileUpload" accept="image/jpeg, image/png" />
+        <p id="prompt">Drag and drop or click to upload</p>
+        <input
+          type="file"
+          name="fileUpload"
+          id="fileUpload"
+          accept="image/jpeg, image/png"
+          required
+        />
+
         <div style="display: none" id="hid-btn">
-          <button class="img-btns" id="remove">Remove image</button>
+          <button type="reset" class="img-btns" id="remove">
+            Remove image
+          </button>
           <button class="img-btns" id="change">Change image</button>
         </div>
       </label>
@@ -33,7 +42,13 @@
 
     <label for="fullName">
       <p>Full Name</p>
-      <input class="input-area" name="full-name" type="text" id="full-name" />
+      <input
+        class="input-area"
+        name="fullName"
+        type="text"
+        id="full-name"
+        required
+      />
     </label>
 
     <label for="email" id="email-area">
@@ -44,17 +59,20 @@
         id="email"
         type="text"
         placeholder="example@email.com"
+        required
       />
     </label>
+    <p id="emial-msg"></p>
 
     <label for="githubUsername">
       <p>Github Username</p>
       <input
         type="text"
         class="input-area"
-        name="github-username"
+        name="githubUsername"
         id="github"
         placeholder="@yourusername"
+        required
       />
     </label>
 

@@ -2,7 +2,7 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
-const port = 3000;
+// const port = 3000;
 
 const app = express();
 const storage = multer.memoryStorage();
@@ -39,8 +39,8 @@ app.post("/ticket", upload.single("fileUpload"), (req, res) => {
   });
 });
 
-app.listen(port, () => {
-  console.log(`Listening on  http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Listening on  http://localhost:${port}`);
+// });
 
 module.exports = app;

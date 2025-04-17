@@ -1,5 +1,5 @@
 {
-  "name": "ticket-generatorx",
+  "name": "ticket-generator",
   "version": "1.0.0",
   "description": "![Design preview for the Conference ticket generator coding challenge](./preview.jpg)",
   "main": "main.js",
@@ -9,7 +9,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
     "body-parser": "^1.20.2",
     "ejs": "^3.1.9",

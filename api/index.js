@@ -2,6 +2,7 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
+const port = 3000;
 
 const app = express();
 const storage = multer.memoryStorage();
@@ -36,6 +37,10 @@ app.post("/ticket", upload.single("fileUpload"), (req, res) => {
     src,
     date: formattedDate,
   });
+});
+
+app.listen(port, () => {
+  console.log(`Listening on  http://localhost:${port}`);
 });
 
 module.exports = app;

@@ -2,7 +2,7 @@
 const express = require("express");
 const multer = require("multer");
 const path = require("path");
-// const port = 3000;
+const port = 3000;
 
 const app = express();
 const storage = multer.memoryStorage();

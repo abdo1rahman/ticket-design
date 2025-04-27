@@ -39,4 +39,5 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 
-.vercel
+# design files for the exercise
+design

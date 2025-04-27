@@ -10,20 +10,20 @@ const emailInput = document.getElementById("email-area");
 const form = document.querySelector("form");
 const emailMsg = document.getElementById("email-msg");
 
-function updateImage(id) {
-  const img = document.getElementById(id);
-  if (window.innerWidth >= 1000) {
-    img.src = "assets/images/pattern-squiggly-line-bottom-desktop.svg";
-  } else {
-    img.src = "assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg";
-  }
-}
+// function updateImage(id) {
+//   const img = document.getElementById(id);
+//   if (window.innerWidth >= 1000) {
+//     img.src = "./assets/images/pattern-squiggly-line-bottom-desktop.svg";
+//   } else {
+//     img.src = "./assets/images/pattern-squiggly-line-bottom-desktop.svg";
+//   }
+// }
 
-// Initial check
-updateImage("big-curve");
+// // Initial check
+// updateImage("big-curve");
 
-// Update on resize
-window.addEventListener("resize", () => updateImage("big-curve"));
+// // Update on resize
+// window.addEventListener("resize", () => updateImage("big-curve"));
 
 fileInput.addEventListener("change", function () {
   const file = this.files[0]; // Get the first selected file

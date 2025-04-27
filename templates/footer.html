@@ -1,3 +1,19 @@
-</body>
-<script src="static/main.js"></script>
-</html>
+<script src="{{url_for('static', filename='main.js')}}"></script>
+<script>
+  function updateImage(id) {
+    const img = document.getElementById(id);
+    if (window.innerWidth >= 1000) {
+      img.src =
+        "{{ url_for('static', filename='assets/images/pattern-squiggly-line-bottom-desktop.svg') }}";
+    } else {
+      img.src =
+        "{{ url_for('static', filename='assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg') }}";
+    }
+  }
+
+  // Initial check
+  updateImage("big-curve");
+
+  // Update on resize
+  window.addEventListener("resize", () => updateImage("big-curve"));
+</script>

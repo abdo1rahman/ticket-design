@@ -39,8 +39,8 @@ app.post("/ticket", upload.single("fileUpload"), (req, res) => {
   });
 });
 
-// app.listen(port, () => {
-//   console.log(`Listening on  http://localhost:${port}`);
-// });
+app.listen(port, () => {
+  console.log(`Listening on  http://localhost:${port}`);
+});
 
 module.exports = app;

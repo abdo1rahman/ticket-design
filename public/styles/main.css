@@ -211,6 +211,10 @@ label p {
   border-radius: 10px;
 }
 
+#full-logo {
+  max-width: 35%;
+}
+
 .gradient-text {
   background: linear-gradient(
     90deg,
@@ -274,11 +278,18 @@ label p {
   #content {
     position: relative;
     top: 15px;
+    font-size: 12px;
     padding: 15px;
     left: 6rem;
     z-index: 1;
     color: white;
     text-align: left;
+  }
+  #info {
+    margin-top: 1rem;
+  }
+  #avatar {
+    height: 70px;
   }
 }
 

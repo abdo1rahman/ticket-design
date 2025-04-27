@@ -1,0 +1,83 @@
+<%- include('header.ejs') %>
+
+<main>
+  <div class="hero">
+    <h1>Your Journey to Coding Conf 2025 Starts Here!</h1>
+  </div>
+  <p>Secure your spot at next year's biggest coding conference.</p>
+  <br />
+
+  <form action="/ticket" method="post" enctype="multipart/form-data">
+    <p>Upload Avatar</p>
+    <div id="drop-area">
+      <label for="fileUpload" class="upload-area">
+        <img
+          src="/assets/images/icon-upload.svg"
+          id="upload-icon"
+          alt="upload icon"
+        />
+        <p id="prompt">Drag and drop or click to upload</p>
+        <input
+          type="file"
+          name="fileUpload"
+          id="fileUpload"
+          accept="image/jpeg, image/png"
+          required
+        />
+
+        <div style="display: none" id="hid-btn">
+          <button type="reset" class="img-btns" id="remove">
+            Remove image
+          </button>
+          <button class="img-btns" id="change">Change image</button>
+        </div>
+      </label>
+    </div>
+    <p
+      style="color: rgba(122, 122, 122, 0.894); font-size: small"
+      id="input-massage"
+    >
+      ⓘ Upload your photo (JPG or PNG, max size: 500KB).
+    </p>
+
+    <label for="fullName">
+      <p>Full Name</p>
+      <input
+        class="input-area"
+        name="fullName"
+        type="text"
+        id="full-name"
+        required
+      />
+    </label>
+
+    <label for="email" id="email-area">
+      <p>Email Address</p>
+      <input
+        class="input-area"
+        name="email"
+        id="email"
+        type="email"
+        placeholder="example@email.com"
+        required
+      />
+    </label>
+    <p id="emial-msg"></p>
+
+    <label for="githubUsername">
+      <p>Github Username</p>
+      <input
+        type="username"
+        class="input-area"
+        name="githubUsername"
+        id="github"
+        placeholder="@yourusername"
+        required
+      />
+    </label>
+
+    <button type="submit" class="btn" id="btn">Generate My Ticket</button>
+  </form>
+</main>
+
+<%- include("footer.ejs") %>

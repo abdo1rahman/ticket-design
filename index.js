@@ -10,9 +10,9 @@ const upload = multer({ storage: storage });
 
 // Set up EJS view engine
 app.set("view engine", "ejs");
-app.set("views", path.join(__dirname, "./views")); // <-- make sure this path is correct
+app.set("views", path.join(__dirname, "./views"));
 
-app.use(express.static(path.join(__dirname, "./public"))); // for serving CSS, images, etc.
+app.use(express.static(path.join(__dirname, "./public")));
 
 app.get("/", (req, res) => {
   res.render("main.ejs");
